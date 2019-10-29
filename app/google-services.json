@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986213787672",
+    "firebase_url": "https://oker-fdbf2.firebaseio.com",
+    "project_id": "oker-fdbf2",
+    "storage_bucket": "oker-fdbf2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986213787672:android:6f0147ff4d942fabd33b6d",
+        "android_client_info": {
+          "package_name": "com.pokrjoin.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986213787672-ns2519mg09kq3shmhfo6ibv1r33q6mul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4lxB0nnMbc3O5psph1a-fUA-bWY8hvZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986213787672-ns2519mg09kq3shmhfo6ibv1r33q6mul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

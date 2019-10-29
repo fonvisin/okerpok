@@ -17,7 +17,7 @@ public class Receiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         int type = intent.getIntExtra(Messages.TYPE_EXTRA, 0);
 
-        Intent intentToRepeat = new Intent(context, MainActivity.class);
+        Intent intentToRepeat = new Intent(context, GoActivity.class);
         intentToRepeat.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, type, intentToRepeat, PendingIntent.FLAG_UPDATE_CURRENT);

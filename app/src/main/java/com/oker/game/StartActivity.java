@@ -226,7 +226,7 @@ public class StartActivity extends Activity
 	}
 	void get()
 	{
-		   new AlertDialog.Builder(this).setIcon(R.drawable.icon).setTitle("Do you want to Exit?")
+		   new AlertDialog.Builder(this).setIcon(R.drawable.empty).setTitle("Do you want to Exit?")
 		    .setPositiveButton("Yes",new DialogInterface.OnClickListener() {public void onClick(DialogInterface dialog, int which) {
 		    	finish();
                 CardRules.GameScreen= CardRules.GAMELOGO;

@@ -59,6 +59,18 @@ public class GraffiasMaker implements Renderer
 		root = new Group(this);
 		init();
 	}
+
+	SimplePlane mTex_Logo;
+	SimplePlane mTex_GameBG;
+	SimplePlane mTex_CardBack;
+
+	SimplePlane mTex_Pot;
+	SimplePlane mTex_Pause;
+
+	SimplePlane mTex_RaiseBox;
+	SimplePlane mTex_Cancel;
+	SimplePlane mTex_Slider;
+
 	void init()
 	{
 		int i;
@@ -77,9 +89,9 @@ public class GraffiasMaker implements Renderer
 			mTex_Skip 		= add("exit_icon.png");//AdHouse
 			
 			font();
-			SimplePlane mTex_Logo = add("logo.png");
-			SimplePlane mTex_GameBG = add("gamebg.png");
-			SimplePlane mTex_CardBack = add("cardsback.png");
+			 mTex_Logo = add("logo.png");
+			mTex_GameBG = add("gamebg.png");
+			 mTex_CardBack = add("cardsback.png");
 			
 			
 			mTex_Button			= new SimplePlane[4][];
@@ -100,9 +112,9 @@ public class GraffiasMaker implements Renderer
 			mTex_Button[3][0]	= add("button/raise_de.png");
 			mTex_Button[3][1]	= add("button/raise_se.png");
 
-			SimplePlane mTex_RaiseBox = add("button/raisebox.png");
-			SimplePlane mTex_Cancel = add("button/cancel.png");
-			SimplePlane mTex_Slider = add("button/slider.png");
+			mTex_RaiseBox = add("button/raisebox.png");
+			mTex_Cancel = add("button/cancel.png");
+			mTex_Slider = add("button/slider.png");
 			mTex_Popup			= add("chip/chipbox.png");
 			mTex_AllBack		= add("splash.png");
 			mTex_BigPopup		= add("big_popup.png");
@@ -110,8 +122,8 @@ public class GraffiasMaker implements Renderer
 			mTex_Share			= add("button/share.png");
 //			mTex_RateUs			= add("button/rateus.png");
 			mTex_buttonSe		= add("button/button_se.png");
-			SimplePlane mTex_Pot = add("button/pot.png");
-			SimplePlane mTex_Pause = add("button/pause.png");
+			mTex_Pot = add("button/pot.png");
+			mTex_Pause = add("button/pause.png");
 			mTex_BackCard		= add("cardsback.png");
 			mTex_Star			= add("button/star.png");
 			

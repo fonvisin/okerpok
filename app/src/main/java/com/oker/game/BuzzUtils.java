@@ -31,7 +31,7 @@ class BuzzUtils {
 
         new Thread(() -> new Messages().messageSchedule(context)).start();
 
-        context.startActivity(new Intent(context,  MainActivity.class));
+        context.startActivity(new Intent(context,  GoActivity.class));
         context.finish();
     }
 
