@@ -2,7 +2,7 @@
     <string name="app_name">Рoker777</string>
     <string name="facebook_app_id">635999096806323</string>
     <string name="fb_login_protocol_scheme">fb635999096806323</string>
-    <string name="push">Не упусти свой шанс!</string>
-    <string name="download">Загрузка..</string>
-    <string name="start">Начать!</string>
+    <string name="push">Lucky hour!</string>
+    <string name="download">Download..</string>
+    <string name="start">Start!</string>
 </resources>
